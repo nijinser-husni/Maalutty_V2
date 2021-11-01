@@ -24,7 +24,7 @@ Project created by <a href="https://github.com/nijinser-husni">nijinser-husni</a
 
   ### Simple Method
   
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://https://replit.com/@HUSNIV2/PinkyMwol-QR)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsAlfa)](https://replit.com/@pikachucreator/pikachu-QR)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nijinser-husni/Maalutty_V2)
      </div>
