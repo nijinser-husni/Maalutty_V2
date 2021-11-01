@@ -187,7 +187,7 @@ MyPnk.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if (!!message.mention && message.mention[0] == '15862077024@s.whatsapp.net') {
 await message.client.sendMessage(message.jid, fs.readFileSync('./uploads/stickers/mention.webp'), MessageType.sticker, { mimetype: Mimetype.webp, quoted : message.data, ptt: false})
     }
-const array = ['Pinky','asena','ayin','back','Back','Bot','fuck','Fuck','Hehe','Hello','Hlo','Kill','kill','kiss','line','love','mwolu','Mwolu','single','tha','thund','z','Z','bie','Bie''Pubg','Pes','Bgmi','Kaztro','Ff','Free fire','chavanam','Manassilayo','Kodathi','Kollum','Vatt','.tts','.song','Gaanam','Single','Maalutty','Xxxtentacion','Aa','Pottan','Budhi','Love','Njan','Mazha','Hi','Vella','Patt','Colour','Hacker','Ok','Sad','Poocha','Poda','Bomb','Ayin','Ariyo','Alone']
+const array = ['Pinky','asena','ayin','back','Back','Bot','fuck','Fuck','Hehe','Hello','Hlo','Kill','kill','kiss','line','love','mwolu','Mwolu','single','tha','thund','z','Z','bie','Bie']
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
@@ -221,11 +221,11 @@ async function checkImAdmin(message, user = message.client.user.jid) {
  
      MyPnk.addCommand({on: 'text', fromMe: false,onlyGroup: true}, (async (message, match) => {
 
-        if(Config.REMOVE){
+        if(Pinky.afnp !== 'false'){
         let banned = jid.find( Jid => Jid === message.jid);
         if(banned !== undefined) return
         
-const array = afn 
+const array = afnp
 array.map( async (a) => {
 let pattern = new RegExp(`\\b${a}\\b`, 'g');
 if(pattern.test(message.message)){
@@ -235,26 +235,6 @@ if(pattern.test(message.message)){
             if (us) return;
     await message.client.sendMessage(message.jid,Lang.KICK, MessageType.text, {quoted: message.data });  
     await message.client.groupRemove(message.jid, [message.data.participant]);                
-}
-});
-    }
-
-    var filtreler = await FilterDb.getFilter(message.jid);
-    if (!filtreler) return; 
-    filtreler.map(
-        async (filter) => {
-            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
-        }
-    );
-}));
-     MyPnk.addCommand({on: 'text', fromMe: false, onlyPm: true}, (async (message, match) => {
-
-        if(Pinky.REMOVE2){
-const array = afnp 
-array.map( async (a) => {
-let pattern = new RegExp(`\\b${a}\\b`, 'g');
-if(pattern.test(message.message)){          
-    await message.client.sendMessage(message.jid,Lang.KICK2, MessageType.text, {quoted: message.data });               
 }
 });
     }
