@@ -68,7 +68,8 @@ async function whatsAsena () {
     
     
     const conn = new WAConnection();
-    conn.version = [2,2121,7];
+    const res = await axios('https://untitled-1ouyr1rszhaw.runkit.sh/web')
+    conn.version = res.data.version
     const Session = new StringSession();
 
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
@@ -133,8 +134,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         });
 
         console.log(
-            chalk.green.bold('❤️MAALUTTY_V2💙 working ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
-            await conn.sendMessage(conn.user.jid, "❤️MAALUTTY_V2💙 ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+            chalk.green.bold('𝚙𝚒𝚗𝚔𝚢 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
+            await conn.sendMessage(conn.user.jid, "ᴘɪɴᴋʏ ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
             await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
     });
     
@@ -276,7 +277,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                                     'Gerçekleşen Hata: ' + error + '\n\n'
                                     , MessageType.text);
                             } else {
-                                await conn.sendMessage(conn.user.jid, '__❤️MAALUTTY_V2💙_☠☠_[error] ' +
+                                await conn.sendMessage(conn.user.jid, '__PINKYBOT_☠☠_[error] ' +
                                     '\n\n*👻 ' + error + '*\n'
                                     , MessageType.text);
                             }
