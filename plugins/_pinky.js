@@ -14,7 +14,7 @@ const Lang = Language.getString('_asena');
 if (Config.STANDPLK == 'off') {
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
