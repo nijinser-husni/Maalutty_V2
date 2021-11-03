@@ -30,10 +30,10 @@ else if (Config.WORKTYPE == 'public') {
         }
 
         if (Config.OWNER == 'default') {
-            await message.client.sendMessage(message.jid,'*❤️MAALUTTY_V2💙 by NIJIN AND HUSNI*' , MessageType.text);
+            await message.client.sendMessage(message.jid,'*MAALUTTY_V2 by NIJIN AND HUSNI*' , MessageType.text);
         }
         else {
-            await message.client.sendMessage(message.jid,Config.OWNER + '\n\n--------------------', MessageType.text);
+            await message.client.sendMessage(message.jid,Config.OWNER + '\n\nMAALUTTY_V2 by husni and nijin', MessageType.text);
         }
     }));
 }
