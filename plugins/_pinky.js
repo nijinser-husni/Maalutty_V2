@@ -14,7 +14,7 @@ const Lang = Language.getString('_asena');
 if (Config.STANDPLK == 'off') {
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    MyPnky.addCommand({pattern: 'help ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
         var CMD_HELP = '';
         if (match[1] === '') {
@@ -246,7 +246,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-     MyPnky.addCommand({pattern: 'list ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+     MyPnky.addCommand({pattern: 'help ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
          var us = await checkUsAdmin(message);
          if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
 
